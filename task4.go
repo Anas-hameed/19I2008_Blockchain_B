@@ -17,7 +17,7 @@ type StudentList_4 struct {
 }
 
 // new student
-func newStudent_4(rollnumber int, name string, address string, courses []string) *Student_4 {
+func NewStudent_4(rollnumber int, name string, address string, courses []string) *Student_4 {
 	s := new(Student_4)
 	s.rollnumber = rollnumber
 	s.name = name
@@ -27,7 +27,7 @@ func newStudent_4(rollnumber int, name string, address string, courses []string)
 }
 
 // create student
-func (ls *StudentList_4) createStudent(rollnumber int, name string, address string, course []string) *Student_4 {
+func (ls *StudentList_4) CreateStudent(rollnumber int, name string, address string, course []string) *Student_4 {
 	st := newStudent_4(rollnumber, name, address, course)
 	ls.list = append(ls.list, st)
 	return st
@@ -35,7 +35,7 @@ func (ls *StudentList_4) createStudent(rollnumber int, name string, address stri
 
 // print the student list in the given format
 // print hash of the each student in the list
-func printStudentList_4(ls *StudentList_4) {
+func PrintStudentList_4(ls *StudentList_4) {
 	for i, v := range ls.list {
 		fmt.Println("================================= list", i, "================================")
 		fmt.Println("student rollnumber:", v.rollnumber)

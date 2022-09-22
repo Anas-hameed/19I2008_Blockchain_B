@@ -11,7 +11,7 @@ type StudentList struct {
 }
 
 // new student
-func newStudent(rollnumber int, name string, address string) *Student {
+func NewStudent(rollnumber int, name string, address string) *Student {
 	s := new(Student)
 	s.rollnumber = rollnumber
 	s.name = name
@@ -20,14 +20,14 @@ func newStudent(rollnumber int, name string, address string) *Student {
 }
 
 // create student
-func (ls *StudentList) createStudent(rollnumber int, name string, address string) *Student {
+func (ls *StudentList) CreateStudent(rollnumber int, name string, address string) *Student {
 	st := newStudent(rollnumber, name, address)
 	ls.list = append(ls.list, st)
 	return st
 }
 
 // print the student list in the given format
-func printStudentList(ls *StudentList) {
+func PrintStudentList(ls *StudentList) {
 	for i, v := range ls.list {
 		println("================================= list", i, "================================")
 		println("student rollnumber:", v.rollnumber)

@@ -13,12 +13,12 @@ type company struct {
 	employees   []employee
 }
 
-func createEmployee(name string, salary int, position string) employee {
+func CreateEmployee(name string, salary int, position string) employee {
 	employee1 := employee{name, salary, position}
 	return employee1
 }
 
-func printCompany(c company) {
+func PrintCompany(c company) {
 	fmt.Println("Company Name:", c.companyName)
 	fmt.Println("----------------------------------------------")
 	for _, v := range c.employees {
@@ -29,7 +29,7 @@ func printCompany(c company) {
 	}
 }
 
-func createEmployeeArray() []employee {
+func CreateEmployeeArray() []employee {
 	employeeArray := []employee{
 		createEmployee("Anas", 10000, "Project Manager"),
 		createEmployee("Shame", 20000, "Frontend Developer"),
