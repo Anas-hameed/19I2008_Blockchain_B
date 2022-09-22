@@ -8,7 +8,7 @@ type employee struct {
 	position string
 }
 
-type company struct {
+type Company struct {
 	companyName string
 	employees   []employee
 }
@@ -18,7 +18,7 @@ func CreateEmployee(name string, salary int, position string) employee {
 	return employee1
 }
 
-func PrintCompany(c company) {
+func PrintCompany(c Company) {
 	fmt.Println("Company Name:", c.companyName)
 	fmt.Println("----------------------------------------------")
 	for _, v := range c.employees {
