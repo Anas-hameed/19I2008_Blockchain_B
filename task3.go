@@ -21,7 +21,7 @@ func NewStudent(rollnumber int, name string, address string) *Student {
 
 // create student
 func (ls *StudentList) CreateStudent(rollnumber int, name string, address string) *Student {
-	st := newStudent(rollnumber, name, address)
+	st := NewStudent(rollnumber, name, address)
 	ls.list = append(ls.list, st)
 	return st
 }

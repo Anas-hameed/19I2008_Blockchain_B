@@ -31,9 +31,9 @@ func PrintCompany(c company) {
 
 func CreateEmployeeArray() []employee {
 	employeeArray := []employee{
-		createEmployee("Anas", 10000, "Project Manager"),
-		createEmployee("Shame", 20000, "Frontend Developer"),
-		createEmployee("Ali", 30000, "Backend Developer"),
+		CreateEmployee("Anas", 10000, "Project Manager"),
+		CreateEmployee("Shame", 20000, "Frontend Developer"),
+		CreateEmployee("Ali", 30000, "Backend Developer"),
 	}
 	return employeeArray
 }
